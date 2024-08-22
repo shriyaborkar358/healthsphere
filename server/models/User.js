@@ -9,6 +9,7 @@ const userSchema = new Schema(
     mobile: {
       type: String,
       required: true,
+      unique:true
     },
     address: {
       type: String,
@@ -26,7 +27,7 @@ const userSchema = new Schema(
     },
     gender:{
         type: String,
-        required: true
+        enun: ["male", "female", "other"]
     },
     role:{
         type: String,
